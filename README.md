@@ -56,13 +56,4 @@
 - Свой PR сам не мержишь — ждёшь одобрения одноклассника.
 - Никаких личных данных: настоящее имя, школа, адрес, телефон, email, пароли.
 
-## Для учителя
 
-- **Защита `main`:** Settings → Code → Rulesets → ruleset **Protect main**
-  (Require a pull request before merging + 1 approval, Block force pushes, Restrict deletions).
-- **Ученики:** Settings → Collaborators → пригласить с правом **Write**
-  (Write нужен, чтобы создавать ветки и Pull Request).
-- **Проверка работ:** вкладка Pull requests → Files changed → Review changes.
-- **Сдача и вопросы:** вкладка Issues — шаблоны уже созданы (вопрос, сдача, баг).
-- **Правила именования веток** (`student/<псевдоним>/task-NN`) лучше показать классу
-  до первого задания — это сэкономит половину вопросов.
