@@ -35,18 +35,20 @@
 
 Учитель (владелец) заранее:
 
-1. Создаёт общий репозиторий курса, например `github-team-course`.
-2. Добавляет всех учеников в **команду** организации.
-3. В настройках → **Branches** защищает `main`:
+1. Держит общий репозиторий курса — этот: `Gim17_Ls_Git`.
+2. Приглашает учеников в **Collaborators** с правом **Write**
+   (Settings → Collaborators → Add people). Write нужен, чтобы создавать ветки и PR.
+3. В настройках → **Code → Rulesets** защищает `main` (ruleset **Protect main**):
    - ✅ Require a pull request before merging
-   - ✅ Require approvals (1 review)
-   - ✅ Do not allow bypassing the above settings
-4. Создаёт файлы:
-   - `students/.gitkeep` — папка для личных карточек
-   - `TEAM.md` — общий список участников (см. ниже)
+   - ✅ Required approvals: 1
+   - ✅ Block force pushes и Restrict deletions
+   - ✅ Обход правил (bypass) — только для администратора репозитория
+4. Проверяет, что в репозитории уже есть:
+   - `students/TEAM.md` — общий список участников (см. ниже)
+   - `.github/ISSUE_TEMPLATE/` — шаблоны вопросов и сдачи заданий
 5. Включает вкладку **Issues**.
 
-Пример `TEAM.md`:
+Пример `students/TEAM.md`:
 
 ```markdown
 # Наша команда
@@ -63,8 +65,8 @@
 
 1. Открой репозиторий курса.
 2. Нажми на выпадающий список веток (сейчас там `main`).
-3. Введи имя: `student/<псевдоним>/add-card`
-   Пример: `student/spacefox/add-card`
+3. Введи имя: `student/<псевдоним>/task-01`
+   Пример: `student/spacefox/task-01`
 4. Нажми **Create branch: … from main**.
 
 ✅ Ты в своей ветке. `main` не тронут.
@@ -120,13 +122,13 @@
 
 ## 🧨 Шаг 2. Общий файл и первый конфликт
 
-Теперь все вместе правят **один файл** `TEAM.md`. Здесь и появится конфликт — специально.
+Теперь все вместе правят **один файл** `students/TEAM.md`. Здесь и появится конфликт — специально.
 
 ### 2.1. Новая ветка
 
-Создай ветку `student/<псевдоним>/add-to-team` **от свежего `main`**.
+Создай ветку `student/<псевдоним>/task-02` **от свежего `main`**.
 
-### 2.2. Добавь строку в таблицу `TEAM.md`
+### 2.2. Добавь строку в таблицу `students/TEAM.md`
 
 ```markdown
 | spacefox | рисование | @spacefox |
@@ -146,7 +148,7 @@
 2. Ты увидишь такое:
 
 ```text
-<<<<<<< student/spacefox/add-to-team
+<<<<<<< student/spacefox/task-02
 | spacefox | рисование | @spacefox |
 =======
 | pixelcat | музыка | @pixelcat |
@@ -190,7 +192,7 @@ Review — обязательная часть. Нельзя мержить св
 - [ ] В `main` не пушил(а) напрямую
 - [ ] Создана карточка `students/<псевдоним>.md`
 - [ ] Открыт и смержен Pull Request №1
-- [ ] Добавлена строка в `TEAM.md` через Pull Request №2
+- [ ] Добавлена строка в `students/TEAM.md` через Pull Request №2
 - [ ] Конфликт разрешён, обе строки сохранены
 - [ ] Сделан review чужого PR (Approve или Comment)
 - [ ] Нет личных данных и секретов
