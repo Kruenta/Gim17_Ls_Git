@@ -1,0 +1,11 @@
+# Операционная система
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Редакторы и IDE
+.vscode/
+.idea/
+
+# Логи
+*.log
