@@ -1,0 +1,27 @@
+name: "🐛 Сломалось"
+description: "Что-то не работает или выглядит странно"
+title: "[Баг] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: "Что случилось"
+      placeholder: "Нажал Merge, появилось сообщение об ошибке..."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Как повторить"
+      placeholder: |
+        1. Открыл PR
+        2. Нажал Update branch
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: "Где работаешь"
+      placeholder: "задание 01, ветка student/spacefox/task-01"

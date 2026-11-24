@@ -1,0 +1,43 @@
+name: "✅ Сдать задание"
+description: "Готово задание — напиши, что сделано"
+title: "[Сдача] "
+body:
+  - type: input
+    id: task
+    attributes:
+      label: "Какое задание"
+      placeholder: "Задание 01 — Первый совместный Pull Request"
+    validations:
+      required: true
+  - type: input
+    id: branch
+    attributes:
+      label: "Ветка"
+      placeholder: "student/spacefox/task-01"
+    validations:
+      required: true
+  - type: input
+    id: pr
+    attributes:
+      label: "Ссылка на Pull Request"
+      placeholder: "https://github.com/Kruenta/Gim17_Ls_Git/pull/..."
+  - type: textarea
+    id: done
+    attributes:
+      label: "Что сделал"
+      placeholder: "Создал карточку, добавил строку в TEAM.md, разрешил конфликт..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: "Чек-лист"
+      options:
+        - label: "Ветка названа по правилу student/<псевдоним>/task-NN"
+          required: true
+        - label: "В main не пушил(а) напрямую"
+          required: true
+        - label: "Нет личных данных и паролей"
+          required: true
+        - label: "Попросил(а) review у одноклассника"
+          required: true
